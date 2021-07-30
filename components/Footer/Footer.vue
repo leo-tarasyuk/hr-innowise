@@ -4,51 +4,75 @@
       <div class="navigation">
         <div class="navigation-size">
           <div class="logo">
-            <img src="@/assets/Header/logo.svg" alt="">
+            <img src="@/assets/Header/logo.svg" alt="logo">
             <p class="logo-text">We develop the world</p>
           </div>
 
-          <div class="navigation-links">
-            <div class="links-group">
-              <a href="" class="link">О нас</a>
-              <a href="" class="link">Проекты</a>
-              <a href="" class="link">Карьера</a>
-            </div>
-            <div class="links-group">
-              <a href="" class="link">Вакансии</a>
-              <a href="" class="link">Стажировка</a>
-              <a href="" class="link">Бенефиты</a>
-            </div>
-            <div class="links-group">
-              <a href="" class="link">Контакты</a>
-            </div>
-          </div>
+          <nav class="navigation__links">
+            <ul class="links-group">
+              <li>
+                <a href="#" class="link">О нас</a>
+              </li>
+              <li>
+                <a href="#" class="link">Проекты</a>
+              </li>
+              <li>
+                <a href="#" class="link">Карьера</a>
+              </li>
+            </ul>
 
-          <div class="navigation-contacts">
-            <div class="contacts">
-              <p class="contact">
-                <span>job@innowise-group.com</span>
-              </p>
-              <p class="contact">
-                <span>(29) 371 73 45</span>
-              </p>
-            </div>
+            <ul class="links-group">
+              <li>
+                <a href="#" class="link">Вакансии</a>
+              </li>
+              <li>
+                <a href="#" class="link">Стажировка</a>
+              </li>
+              <li>
+                <a href="#" class="link">Бенефиты</a>
+              </li>
+            </ul>
 
-            <div class="social-links">
-              <a href="">
-                <img src="@/assets/Footer/link-instagram.svg" alt="">
-              </a>
-              <a href="">
-                <img src="@/assets/Footer/link-facebook.svg" alt="">
-              </a>
-              <a href="">
-                <img src="@/assets/Footer/link-youtube.svg" alt="">
-              </a>
-              <a href="">
-                <img src="@/assets/Footer/link-linkedin.svg" alt="">
-              </a>
-            </div>
-          </div>
+            <ul class="links-group">
+              <li>
+                <a href="#" class="link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="navigation__contacts">
+            <ul class="contacts">
+              <li class="contact">
+                <a href="mailto:job@innowise-group.com">job@innowise-group.com</a>
+              </li>
+              <li class="contact">
+                <a href="tel:+375293717345">(29) 371 73 45</a>
+              </li>
+            </ul>
+
+            <ul class="social-links">
+              <li class="social-link">
+                <a href="#">
+                  <img src="@/assets/Footer/link-instagram.svg" alt="instagram">
+                </a>
+              </li>
+              <li class="social-link">
+                <a href="#">
+                  <img src="@/assets/Footer/link-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="social-link">
+                <a href="#">
+                  <img src="@/assets/Footer/link-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="social-link">
+                <a href="#">
+                  <img src="@/assets/Footer/link-linkedin.svg" alt="linkedin">
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -87,17 +111,12 @@ footer {
 
         .logo {
           width: 210px;
-          @media (max-width: $breakpointExtraExtraLarge) {
-            display: none;
-          }
 
           img {
             padding-bottom: 24px;
           }
 
           .logo-text {
-            font-family: $fontManrope;
-            font-style: normal;
             font-weight: 600;
             font-size: 20px;
             line-height: 27px;
@@ -105,43 +124,37 @@ footer {
           }
         }
 
-        .navigation-links {
+        .navigation__links {
           width: 45%;
           height: 135px;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-          @media (max-width: $breakpointExtraExtraLarge) {
-            width: 50%;
-          }
 
           .links-group {
             display: flex;
             flex-direction: column;
-            padding-right: 20px;
 
-            a {
-              font-family: $fontManrope;
-              font-style: normal;
-              font-weight: 500;
-              font-size: 18px;
-              line-height: 25px;
-              cursor: pointer;
-              text-decoration: none;
-              outline: none;
+            li {
+              list-style: none;
               padding-bottom: 20px;
-              color: $color-grey-2;
+
+              a {
+                font-weight: 500;
+                line-height: 25px;
+                cursor: pointer;
+                text-decoration: none;
+                outline: none;
+                color: $color-grey-2;
+              }
             }
           }
         }
 
-        .navigation-contacts {
+        .navigation__contacts {
           width: 217px;
           height: auto;
-          font-family: $fontManrope;
-          font-style: normal;
           font-weight: 500;
-          font-size: 18px;
           line-height: 25px;
           color: $color-red-1;
 
@@ -149,12 +162,15 @@ footer {
             height: 150px;
 
             .contact {
+              list-style: none;
               margin-bottom: 24px;
               
-              span {
-                padding-bottom: 6px;
+              a {
+                text-decoration: none;
+                color: $color-red-1;
                 border-bottom: 1px solid $color-red-1;
-              }
+                padding-bottom: 6px;
+              } 
             }
           }
 
@@ -163,11 +179,18 @@ footer {
             display: flex;
             justify-content: space-between;
 
-            a {
+            .social-link {
+              list-style: none;
               display: flex;
               justify-content: center;
               align-items: center;
               cursor: pointer;
+
+              a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
             }
           }
         }
@@ -181,13 +204,20 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: $fontManrope;
-      font-style: normal;
-      font-weight: normal;
       font-size: 16px;
       line-height: 22px;
       color: $color-grey-2
     }
+  }
+}
+
+@media (max-width: $breakpointExtraExtraLarge) {
+  .logo {
+    display: none;
+  }
+  
+  .navigation__links {
+    width: 50%;
   }
 }
 </style>

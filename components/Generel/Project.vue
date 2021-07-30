@@ -1,6 +1,10 @@
 <template>
   <div class="project-block">
-    <img  class="project-image" :src="require(`@/assets/Projects/${img}.svg`)" />
+    <img
+      class="project-image"
+      :src="require(`@/assets/Projects/${img}.svg`)"
+      :alt="`project ${img}`"
+    />
     <h2 class="project-title">
       {{ title }}
     </h2>
@@ -43,18 +47,14 @@ export default {
 
   .project-title {
     font-family: $fontMontserrat;
-    font-style: normal;
     font-weight: 800;
     font-size: 26px;
-    line-height: 32px;
     color: $color-black-2;
     padding-bottom: 16px;
   }
 
   .project-text {
     max-width: 656px;
-    font-family: $fontManrope;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
