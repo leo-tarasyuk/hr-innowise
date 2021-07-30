@@ -1,7 +1,7 @@
 <template>
   <header ref="header" v-scroll="handleScroll" >
     <img class="logo" src="@/assets/Header/logo.svg" alt="logo" />
-    <img class="navigation" src="@/assets/Header/navigation.svg" />
+    <img class="navigation" src="@/assets/Header/navigation.svg" alt="points"/>
   </header>
 </template>
 
@@ -42,6 +42,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles';
+
 header {
   width: 100%;
   height: 120px;
@@ -50,7 +52,7 @@ header {
   justify-content: space-between;
   position: fixed;
   z-index: 100;
-  box-shadow: 0 3px 15px rgba(0,0,0,.08),0 5px 5px -3px rgba(0,0,0,.09);
+  box-shadow: 0 3px 15px $color-black-7, 0 5px 5px -3px $color-black-8;
 
   .logo {
     padding-left: 60px;

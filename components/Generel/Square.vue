@@ -2,7 +2,7 @@
   <div class="info-square">
     <h2>{{ title }}</h2>
     <p>{{ text }}</p>
-    <img src="@/assets/Description/Square.svg" />
+    <img src="@/assets/Description/Square.svg" alt="square"/>
   </div>
 </template>
 
@@ -32,8 +32,6 @@ export default {
   margin: 30px 10px;
 
   h2 {
-    font-family: $fontManrope;
-    font-style: normal;
     font-weight: 500;
     font-size: 56px;
     line-height: 76px;
@@ -42,10 +40,6 @@ export default {
   }
 
   p {
-    font-family: $fontManrope;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
     line-height: 25px;
     color: $color-white-1;
   }

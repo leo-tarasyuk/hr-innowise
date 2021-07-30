@@ -1,26 +1,24 @@
 <template>
-  <div>
-    <div class="search-component">
-      <label v-if="stateTags" for="search-input">
-        <span 
-          v-for="(language, index) in languages"
-          :key="index"
-          class="tag"
-          @click="pickLanguage(language)"
-        >
-          {{ language }}
-        </span>
-      </label>
-      <input
-        id="search-input"
-        ref="searchInput"
-        class="search-input"
-        type="text"
-        placeholder="Я ищу вакансию, например"
-        @input="checkInputValue"
+  <div class="search-component">
+    <label v-if="stateTags" for="search-input">
+      <span 
+        v-for="(language, index) in languages"
+        :key="index"
+        class="tag"
+        @click="pickLanguage(language)"
       >
-      <button class="search-button" @click="checkVacation($refs.searchInput.value)"></button>
-    </div>
+        {{ language }}
+      </span>
+    </label>
+    <input
+      id="search-input"
+      ref="searchInput"
+      class="search-input"
+      type="text"
+      placeholder="Я ищу вакансию, например"
+      @input="checkInputValue"
+    >
+    <button class="search-button" @click="checkVacation($refs.searchInput.value)"></button>
   </div>
 </template>
 
@@ -54,7 +52,7 @@ export default {
 
     checkVacation(language) {
       if (language) {
-        // this.$emit('show-page', language)
+        this.$emit('show-page', language)
       }
     }
   }
@@ -78,7 +76,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: $fontManrope;
     @media (max-width: $breakpointExtraLarge) {
       display: none;
     }
@@ -89,9 +86,7 @@ export default {
       justify-content: center;
       align-items: center;
       border-radius: 23px;
-      font-family: $fontManrope;
       font-weight: 500;
-      font-size: 18px;
       line-height: 25px;
       color: $color-grey-2;
       background: $color-white-2;

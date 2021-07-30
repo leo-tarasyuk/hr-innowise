@@ -1,18 +1,18 @@
 <template>
   <div class="description" :class="{'description-mini': !withoutPoint}">
-    <div class="description-title" :class="{'light-text': !lightMod}">
+    <div class="description__title" :class="{'light-text': !lightMod}">
       {{ title }} <p v-if="withoutPoint" class="red-point"></p>
     </div>
 
     <p
       v-if="preTitle.state"
-      class="description-pre-title"
+      class="description__pre-title"
       :class="{'light-text': !lightMod}"
     >
       {{ preTitle.text }}
     </p>
 
-    <p class="description-text" :class="{'light-text': !lightMod}">
+    <p class="description__text" :class="{'light-text': !lightMod}">
       {{ text }}
     </p>
 
@@ -75,9 +75,8 @@ export default {
 .description {
   max-width: 543px;
 
-  .description-title {
+  .description__title {
     font-family: $fontMontserrat;
-    font-style: normal;
     font-weight: 800;
     font-size: 40px;
     line-height: 49px;
@@ -94,22 +93,15 @@ export default {
     }
   }
 
-  .description-pre-title {
-    font-family: $fontManrope;
-    font-style: normal;
+  .description__pre-title {
     font-weight: bold;
     font-size: 22px;
     line-height: 36px;
     padding-bottom: 20px;
   }
 
-  .description-text {
+  .description__text {
     width: 100%;
-    font-family: $fontManrope;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
     padding-bottom: 48px;
   }
 

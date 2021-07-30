@@ -1,14 +1,14 @@
 <template>
   <div class="vacation">
     <div class="vacation-size">
-      <div class="vacation-position">
-        <h2 class="vacation-position-name">{{ vacation }}</h2>
+      <a href="#"  class="vacation__position">
+        <h2 class="vacation__position__name">{{ vacation }}</h2>
         <img 
           v-if="hot"
-          class="vacation-position-hot"
-          src="@/assets/JobSearching/fire.svg" 
+          src="@/assets/JobSearching/fire.svg"
+          alt="vacation" 
         />
-      </div>
+      </a>
       <p class="vacation-type">
         {{ type }}
       </p>
@@ -44,7 +44,7 @@ export default {
   width: 440px;
   height: 200px;
   margin: 16px;
-  background: linear-gradient(98.2deg, #29292D 2.85%, #1A1A1D 100.44%);
+  background: linear-gradient(98.2deg, $color-black-6 2.85%, $color-black-9 100.44%);
   border-radius: 8px;
   position: relative;
   cursor: pointer;
@@ -52,20 +52,22 @@ export default {
   .vacation-size {
     width: 100%;
     height: 100%;
-    background: url('@/assets/JobSearching/vacation-background.svg');
-    background-repeat: no-repeat;
-    background-position-x: right;
+    &:hover {
+      background: url('@/assets/JobSearching/vacation-background.svg');
+      background-repeat: no-repeat;
+      background-position-x: right;
+    }
     
-    .vacation-position {
+    .vacation__position {
       width: 100%;
       display: flex;
       position: absolute;
       bottom: 64px;
       left: 24px;
+      text-decoration: none;
 
-      .vacation-position-name {
+      .vacation__position__name {
         font-family: $fontMontserrat;
-        font-style: normal;
         font-weight: 800;
         font-size: 22px;
         line-height: 27px;
@@ -78,9 +80,6 @@ export default {
     }
 
     .vacation-type {
-      font-family: $fontManrope;
-      font-style: normal;
-      font-weight: normal;
       font-size: 16px;
       line-height: 24px;
       color: $color-grey-2;

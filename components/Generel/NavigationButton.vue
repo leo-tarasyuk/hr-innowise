@@ -1,7 +1,11 @@
 <template>
   <button class="navigation-button" :class="{ 'light': light }">
-    <p class="button-text">{{ text }}</p>
-    <img class="button-img" src="@/assets/SearchForm/arrow-right.svg" />
+    <span class="button-text">{{ text }}</span>
+    <img
+      class="button-img"
+      src="@/assets/SearchForm/arrow-right.svg"
+      alt="arrow"
+    />
   </button>
 </template>
 
@@ -42,8 +46,6 @@ export default {
   }
 
   .button-text {
-    font-family: $fontManrope;
-    font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
