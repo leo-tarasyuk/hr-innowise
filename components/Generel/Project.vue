@@ -2,7 +2,7 @@
   <div class="project-block">
     <img
       class="project-image"
-      :src="require(`@/assets/Projects/${img}.svg`)"
+      :src="require(`@/assets/Projects/${img}.png`)"
       :alt="`project ${img}`"
     />
     <h2 class="project-title">

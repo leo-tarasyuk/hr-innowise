@@ -144,7 +144,6 @@
             <IntershipDetails
               v-for="(details, index) in intershipDetails"
               :key="index"
-              class="intership-description"
               :title="details.title"
               :text="details.text"
               :img="details.img" 
@@ -213,17 +212,17 @@
             </label>
 
             <div class="pictures">
-              <img src="@/assets/JobSearching/slider1.svg" alt="slider1"/>
-              <img src="@/assets/JobSearching/slider2.svg" alt="slider2"/>
-              <img src="@/assets/JobSearching/slider3.svg" alt="slider3"/>
-              <img src="@/assets/JobSearching/slider4.svg" alt="slider4"/>
-              <img src="@/assets/JobSearching/slider1.svg" alt="slider5"/>
-              <img src="@/assets/JobSearching/slider2.svg" alt="slider6"/>
-              <img src="@/assets/JobSearching/slider3.svg" alt="slider7"/>
-              <img src="@/assets/JobSearching/slider4.svg" alt="slider8"/>
-              <img src="@/assets/JobSearching/slider1.svg" alt="slider9"/>
-              <img src="@/assets/JobSearching/slider2.svg" alt="slider10"/>
-              <img src="@/assets/JobSearching/slider3.svg" alt="slider11"/>
+              <img src="@/assets/JobSearching/slider1.png" alt="slider1"/>
+              <img src="@/assets/JobSearching/slider2.png" alt="slider2"/>
+              <img src="@/assets/JobSearching/slider3.png" alt="slider3"/>
+              <img src="@/assets/JobSearching/slider4.png" alt="slider4"/>
+              <img src="@/assets/JobSearching/slider1.png" alt="slider5"/>
+              <img src="@/assets/JobSearching/slider2.png" alt="slider6"/>
+              <img src="@/assets/JobSearching/slider3.png" alt="slider7"/>
+              <img src="@/assets/JobSearching/slider4.png" alt="slider8"/>
+              <img src="@/assets/JobSearching/slider1.png" alt="slider9"/>
+              <img src="@/assets/JobSearching/slider2.png" alt="slider10"/>
+              <img src="@/assets/JobSearching/slider3.png" alt="slider11"/>
             </div>
           </div>
         </div>
@@ -374,7 +373,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('@/assets/SearchForm/background.svg');
+    background: url('@/assets/SearchForm/background.png');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -450,7 +449,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: url('@/assets/Development/background.svg');
+    background: url('@/assets/Development/background.png');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -793,19 +792,19 @@ main {
         }
 
         .label1 {
-          left: calc(50% - 17px);
+          left: calc(50% - 42px);
         }
 
         .label2 {
-          left: calc(50% + 11px);
+          left: calc(50% - 14px);
         }
         
         .label3 {
-          left: calc(50% + 39px);
+          left: calc(50% + 14px);
         }
 
         .label4 {
-          left: calc(50% + 67px);
+          left: calc(50% + 42px);
         }
 
         .pictures {
@@ -818,8 +817,8 @@ main {
           position: absolute;
 
           img {
-            width: 322px;
-            height: 322px;
+            width: 308px;
+            height: 308px;
             margin-right: 32px;
             border-radius: 10px;
           }
@@ -838,7 +837,7 @@ main {
         }
 
         #radio2:checked ~ .pictures {
-          transform: translate(-27.25%);
+          transform: translate(-27.27%);
         }
 
         #radio3:checked ~ .label3 {
@@ -846,7 +845,7 @@ main {
         }
 
         #radio3:checked ~ .pictures {
-          transform: translate(-54.5%);
+          transform: translate(-54.54%);
         }
 
         #radio4:checked ~ .label4 {
@@ -894,11 +893,13 @@ main {
       display: none;
     }
 
-    .technology-size {
-      justify-content: center;
+    .technology {
+      .technology-size {
+        justify-content: center;
 
-      .technology-images {
-        display: none;
+        .technology-images {
+          display: none;
+        }
       }
     }
 
@@ -955,10 +956,6 @@ main {
             overflow: initial;
             max-height: none;
           }
-          
-          .intership-block {
-            padding-top: 100px;
-          }
         }
       }
 
@@ -982,5 +979,178 @@ main {
       }
     }
   }
+}
+
+@media (max-width: $breakpointMedium) {
+main {
+  .search-block {
+    height: auto;
+
+    .search-form {
+      width: 90%;
+      padding: 100px 0 50px;
+
+      .search-title {
+        font-size: 32px;
+        text-align: center;
+        line-height: 10px;
+        padding-bottom: 20px;
+
+        .red-color {
+          font-size: 32px;
+          line-height: none;
+        }
+      }
+
+      .search-text {
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 20px;
+      }
+
+      .navigation-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+
+        .margin-right {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .information {
+    height: auto;
+    padding: 30px 0;
+
+    .information-size {
+      width: 90%;
+    }
+
+    .information-block {
+      min-width: 300px;
+    }
+  }
+
+  .development {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .projects {
+    height: auto;
+    padding: 30px 0;
+
+    .projects-size {
+      width: 90%;
+
+      .project-surgeons-assistent {
+        padding-bottom: 50px;
+      }
+
+      .project-pathology {
+        padding-bottom: 50px; 
+      }
+
+      .project-distance-learning {
+        padding-bottom: 50px;    
+      }
+
+      .project-stock-analysis {
+        padding-bottom: 50px; 
+      }
+
+      .project-token-sale {
+        padding-bottom: 50px;  
+      }
+    }
+  }
+
+  .technology {
+    height: auto;
+    padding: 30px 0;
+
+    .technology-size {
+      width: 90%;
+    }
+  }
+
+  .job-searching {
+    width: 100%;
+
+    .job-searching-size {
+      width: 100%;
+
+      .job-searching__specialist {
+        width: 100%;
+
+        .specialist__description {
+          padding-top: 50px;
+        }
+
+        .job-searching__vacations {
+          overflow: initial;
+          max-height: none;
+          margin-top: 50px;
+        }
+        
+        .intership-block {
+          padding-top: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .intership-description {
+            padding-bottom: 40px;
+          }
+        }
+      }
+
+      .company-life {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .company-life__description {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .company-life__text {
+            width: 90%;
+            font-size: 16px;
+            text-align: center;
+            padding: 0 0 10px 0;
+          }
+
+          .company-life__instagram {
+            .company-life-btn {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .slider {
+          width: 90%;
+          padding-top: 0;
+          height: 250px;
+          
+          .pictures {
+            img {
+              width: 100px;
+              height: 100px;
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 }
 </style>

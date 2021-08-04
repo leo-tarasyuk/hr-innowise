@@ -64,4 +64,20 @@ header {
     cursor: pointer;
   }
 }
+
+@media (max-width: $breakpointMedium) {
+  header {
+    height: 50px;
+
+    .logo {
+      padding-left: 30px;
+    }
+
+    .navigation {
+      padding-right: 30px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
 </style>

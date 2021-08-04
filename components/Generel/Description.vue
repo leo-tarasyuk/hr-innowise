@@ -16,7 +16,7 @@
       {{ text }}
     </p>
 
-    <div>
+    <div class="navigation-btn">
       <NavigationButton :light="lightMod" :text="buttonText" />
     </div>
   </div>
@@ -112,5 +112,45 @@ export default {
 
 .description-mini {
    max-width: 425px;
+}
+
+@media (max-width: $breakpointMedium) {
+  .description {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    .description__title {
+      font-size: 28px;
+      line-height: 32px;
+      padding-bottom: 16px;
+      white-space: normal;
+
+      .red-point {
+        display: none;
+      }
+    }
+
+    .description__pre-title {
+      font-size: 20px;
+      padding-bottom: 12px;
+    }
+
+    .description__text {
+      padding-bottom: 16px;
+    }
+
+    .navigation-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .description-mini {
+    max-width: none;
+  }
 }
 </style>

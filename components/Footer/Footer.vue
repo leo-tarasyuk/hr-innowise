@@ -204,6 +204,7 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
       font-size: 16px;
       line-height: 22px;
       color: $color-grey-2
@@ -218,6 +219,65 @@ footer {
   
   .navigation__links {
     width: 50%;
+  }
+}
+
+@media (max-width: $breakpointMedium) {
+  footer {
+    height: auto;
+
+    .footer-size {
+      .navigation {
+        height: auto;
+
+        .navigation-size {
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 0;
+
+          .navigation__links {
+            width: 100%;
+            height: auto;
+
+            .links-group {
+              li {
+                a {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+          .navigation__contacts {
+            width: 100%;
+
+            .contacts {
+              height: auto;
+              margin-bottom: 24px;
+              
+              .contact {
+                margin-bottom: 14px;
+
+                a {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .social-links {
+              width: 100%;
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+      
+      .copyright {
+        font-size: 12px;
+        height: 53px;
+      }
+    }
   }
 }
 </style>
