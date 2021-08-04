@@ -60,4 +60,27 @@ export default {
     color: $color-white-1;
   }
 }
+
+@media (max-width: $breakpointMedium) {
+  .intership-description {
+    width: 90%;
+    height: auto;
+
+    img {
+      width: 40px;
+      height: 40px;
+      padding-right: 10px;
+    }
+
+    .intership-description__title {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .intership-description__text { 
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
 </style>

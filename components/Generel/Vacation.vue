@@ -88,7 +88,12 @@ export default {
       left: 24px;
     }
   }
+}
 
-  
+@media (max-width: $breakpointMedium) {
+  .vacation {
+    width: 300px;
+    height: 120px;
+  }
 }
 </style>

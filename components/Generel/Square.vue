@@ -50,4 +50,10 @@ export default {
     right: 0;
   }
 }
+
+@media (max-width: $breakpointMedium) {
+  .info-square {
+    margin: 10px;
+  }
+}
 </style>

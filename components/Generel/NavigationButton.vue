@@ -66,4 +66,12 @@ export default {
     background-color: $color-black-1;
   }
 }
+
+@media (max-width: $breakpointMedium) {
+  .navigation-button {
+    .button-text {
+      font-size: 14px;
+    }
+  }
+}
 </style>

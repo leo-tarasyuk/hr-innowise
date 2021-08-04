@@ -108,7 +108,7 @@ export default {
     background-image: url('@/assets/SearchForm/search.svg');
     background-position: 27px 24px; 
     background-repeat: no-repeat;
-    padding: 12px 78px 12px 78px;
+    padding: 12px 78px;
 
     &::placeholder {
       color: #8C8C8C;
@@ -127,6 +127,25 @@ export default {
     background-color: $color-white-1;
     background-image: url('@/assets/SearchForm/button.svg');
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: $breakpointMedium) {
+  .search-component {
+    .search-input {
+      height: 42px;
+      font-size: 14px;
+      background-position: 12px 4px;
+      padding: 12px 50px; 
+    }
+
+    .search-button {
+      height: 30px;
+      width: 30px;
+      top: 6px;
+      right: 18px;
+      background-size: cover;
+    }
   }
 }
 </style>
